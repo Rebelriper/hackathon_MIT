@@ -1,0 +1,1 @@
+# Server folder for Node JS backend
