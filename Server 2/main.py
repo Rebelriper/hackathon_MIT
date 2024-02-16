@@ -15,9 +15,9 @@ def predict():
     prediction=model.predict(data)
     return jsonify({'prediction':prediction.tolist()})
 
-@app.route('/')
-def welcome():
-    return "Successful"
+# @app.route('/')
+# def welcome():
+#     return "Successful"
 
 
 if __name__=='__main__':
