@@ -7,7 +7,12 @@ app=Flask(__name__)
 with open('plant_detect.pkl','rb') as f:
     model=pickle.load(f)
 
-
+@app.route('/',methods=['GET'])
+def home():
+    return jsonify({
+        "success": True,
+        "message": "Service is Up and Running"
+    })
 
 @app.route('/predict',methods=['POST'])
 def predict():
